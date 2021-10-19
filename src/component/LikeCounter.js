@@ -21,6 +21,12 @@ export default function LikeCounter() {
     set_numLikes(initial_numLikes);
   };
 
+  const [liked, set_Liked] = useState(false);
+
+  const toggleLiked = () => {
+    set_Liked(!false);
+  };
+
   return (
     <div>
       <p>
@@ -29,6 +35,10 @@ export default function LikeCounter() {
       <button onClick={increment}>Liked button</button>
       <button onClick={reset}>Reset Button</button>
       {/* <button onClick={() => set_numLikes(numLikes + 1)}>Liked button</button> */}
+      {/* <button onClick={toggleLiked}>liked</button> */}
+      <button onClick={toggleLiked}>
+        {liked ? "You've liked this" : "Like This"}
+      </button>
     </div>
   );
 }
