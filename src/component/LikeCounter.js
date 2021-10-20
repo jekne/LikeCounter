@@ -1,5 +1,5 @@
 // src/components/LikeCounter.js
-import { useState } from "react"; // <- note the added import of useState
+import { useEffect, useState } from "react"; // <- note the added import of useState
 
 export default function LikeCounter() {
   const initial_numLikes = 0;
@@ -26,6 +26,14 @@ export default function LikeCounter() {
   const toggleLiked = () => {
     set_Liked(!false);
   };
+
+  console.log("A render!");
+
+  useEffect(() => {
+    console.log("The useEffect action!");
+  }, [numLikes]);
+
+  // this useEffect is the useEffect when you place numLikes on the array change a little on the console
 
   return (
     <div>

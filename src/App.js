@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <main>
         <ArticleList />
-        {/* <Animals />
+        <Animals />
         here above there is the link of the animals */}
         {/* <LikeCounter /> */}
         {/* like counter appears all the buttons with the functions like or dislike */}
